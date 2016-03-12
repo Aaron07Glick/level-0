@@ -1,7 +1,7 @@
 
-public class YEARSALIVE {
+public class MYAGES {
 	public static void main(String[] args) {
-		for (int i = 2000; i < 2016; i++) {
+		for (int i = 0; i < 14; i++) {
 			System.out.println(i + 1);
 		}
 	}
