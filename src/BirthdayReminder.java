@@ -21,11 +21,19 @@ public class BirthdayReminder {
 		}
 		// print mom's birthday
 		// 5. if user asked for "dad"
-
+		else if (deadpool.equalsIgnoreCase("dad")) {
+			JOptionPane.showMessageDialog(null, "" + dadsBirthday);
+		}
 		// print dad's birthday
 		// 6. if user asked for your name
+		else if (deadpool.equalsIgnoreCase("me")) {
+			JOptionPane.showMessageDialog(null, "" + myBirthday);
+		}
+
 		// print myBirthday
 		// 7. otherwise print "Sorry, i don't remember that person's birthday!"
-
+		else {
+			JOptionPane.showMessageDialog(null, "sorry i do not know that persons bday... go to google");
+		}
 	}
 }
