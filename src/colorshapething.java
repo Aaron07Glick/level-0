@@ -5,7 +5,7 @@ import org.teachingextensions.logo.Colors;
 import org.teachingextensions.logo.Tortoise;
 import org.teachingextensions.logo.Turtle.Animals;
 
-public class TortoiseColorChooser {
+public class colorshapething {
 	public static void main(String[] args) {
 String color;
 Tortoise.setSpeed(10);
@@ -24,7 +24,7 @@ Tortoise.setAnimal(Animals.Turtle);
 //else  {
 //	Tortoise.setPenColor(Color.black);
 //}
-for (int i = 0; i < 50; i++) {
+for (int i = 0; i < 3; i++) {
 	
 	Tortoise.setPenColor(Colors.getRandomColor());
 	
@@ -40,13 +40,25 @@ for (int i = 0; i < 50; i++) {
 	
 	//1. make the tortoise draw a shape (this will take more than one line of code)
 	int side = 6;
-	
+	int length = 10;
 for (int a = 0; a < side; a++) {
-	Tortoise.move(50 + 2*a);
-	Tortoise.move(50);
+	
+	Tortoise.move(length);
 	Tortoise.turn(360/side);
+	
 }
+	Tortoise.turn(60*4);
+	Tortoise.penUp();
+	Tortoise.move(length);
+	Tortoise.turn(60*2);
+	Tortoise.move(length);
+	Tortoise.turn(60);
+	Tortoise.penDown();
+	
+	
 	
 }
 	}
 }
+
+
