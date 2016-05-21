@@ -10,18 +10,33 @@ import javax.swing.JOptionPane;
 public class ChangeCalculator {
 
 	public static void main(String[] args) {
-		String deadpool;
-		// Ask the user how many nickels they have
-		deadpool = JOptionPane.showInputDialog("how many nickals do you have?");
-		// Convert their answer to an int using Integer.parseInt()
-		int deadpoolInt = Integer.parseInt(deadpool);
-		// Ask the user how many dimes they have, and convert their answer
-		deadpool = JOptionPane.showInputDialog("how many dimes do you have?");
-		// Ask the user how many quarters they have, and convert their answer
-		int deadppolInt = Integer.parseInt(deadpool);
-		// Calculate how much money the user has and save it in a double variable
+		double number;
+		int QuarterMoney = GetQuarterAmount();
+		int DimeMoney = GetDimeAmount();
+		int NickalMoney = GetNickalAmount();
+		number = QuarterMoney + DimeMoney + NickalMoney;
+		JOptionPane.showInputDialog("You have " + number + " cents");
+	}
 
-		// Tell the user how much money they have
+	static int GetQuarterAmount() {
+		String deadpool;
+		deadpool = JOptionPane.showInputDialog("how many quarters do you have");
+		int deadpoolquarter = Integer.parseInt(deadpool);
+		return deadpoolquarter * 25;
+	}
+
+	static int GetDimeAmount() {
+		String deadpool;
+		deadpool = JOptionPane.showInputDialog("how many dimes do you have?");
+		int deadpooldime = Integer.parseInt(deadpool);
+		return deadpooldime * 10;
+	}
+
+	static int GetNickalAmount() {
+		String deadpool;
+		deadpool = JOptionPane.showInputDialog("how many nickals do you have?");
+		int deadpoolnickal = Integer.parseInt(deadpool);
+		return deadpoolnickal * 5;
 
 	}
 }
