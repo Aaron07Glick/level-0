@@ -8,15 +8,18 @@ import org.jointheleague.graphical.robot.Robot;
 public class StarShow {
 	
 	Robot robot = new Robot("batman");
-	
+	Robot robot2 = new Robot("batman");
 	void makeStars() {
 		
-	
+		
+		robot2.setSpeed(10);
 		// 13. Set the speed to 8
 		robot.setSpeed(10);
 		// 6. Make a variable to hold the X position of the Robot and set it to 10
+		int x2 = 1750;
 		int x = 10;
 		// 7. Make a variable to hold the Y position of the Robot and set it to 950
+		
 		int y = 950;
 		// 8. Make a variable to hold the star size and set it to 25
 		int starsize = 25;
@@ -24,32 +27,40 @@ public class StarShow {
 		for (int i = 0; i < 30; i++) {
 			
 			// 19. Set the pen width to i 
+			robot2.setPenWidth(i);
 			robot.setPenWidth(i);
 			// 10. Set the X position of the robot to your X variable
+			robot2.setX(x2);
+			robot2.setY(y);
 			robot.setX(x);
 			// 11. Set the Y position of the robot to your Y variable
 			robot.setY(y);
 			// 9. Call the drawStar() method with your star size variable
 			drawStar(starsize);
 			// 14. Increase the X position by star size. See Figure 2.
+			x2-=starsize;
 			x+=starsize;
 			// 15. decrease the Y position by star size. See Figure 3.
 			y-=starsize;
 			// 16. Increase the star size by 20
 			starsize+=20;
 			// 17. Turn the robot 12 degrees
+			robot2.turn(12);
 			robot.turn(12);
 			// 18. Make each star a different random color like in Figure 4. 
 			robot.setRandomPenColor();
+			robot2.setRandomPenColor();
 		}
 	}
 
 	private void drawStar(int starSize) {
 		// 2. Put the robot's pen down
 		robot.penDown();
+		robot2.penDown();
 		// 4. Repeat both commands 5 times. See Figure 1 at http://bit.ly/star-show
 		for (int i = 0; i < 5; i++) {
-			
+				robot2.move(starSize);
+				robot2.turn(144);
 			// 1. Move the robot the distance of the starSize variable
 				robot.move(starSize);
 			// 3. Turn the robot 144 degrees
